@@ -1,0 +1,24 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<form [formGroup]="songForm" *ngIf="!loading">
+  <div class="form-group">
+    <label for="genre">Genre</label>
+    <input type="text" class="form-control" id="genre" formControlName="genre">
+  </div>
+  <div class="form-group">
+    <label for="titre">Titre</label>
+    <input type="text" class="form-control" id="titre" formControlName="titre">
+  </div>
+  <div class="form-group">
+    <label for="heat">Durée</label>
+    <div class="heat-container">
+      <input type="number" min="0" max="10000" class="form-control heat-reading" formControlName="duree">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="auteur">Auteur</label>
+    <textarea class="form-control" id="auteur" formControlName="auteur"></textarea>
+  </div>
+  
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="songForm.invalid">SUBMIT</button>
+</form>
+<!--rows="5" à ligne 19 entre id et formControlName-->

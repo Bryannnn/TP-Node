@@ -1,0 +1,14 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<p *ngIf="!loading && songs.length <= 0">
+  No songs to display!
+</p>
+<p class="list-title" *ngIf="!loading && songs.length > 0">THE SONGS</p>
+<div class="song-list" *ngIf="!loading && songs.length  > 0">
+  <div class="song-list-item" *ngFor="let song of songs" (click)="onClickSong(song.id)">
+
+    <h4>{{ song.titre| uppercase }}</h4>
+	<p>Auteur: {{ song.auteur }}</p>
+    <p>Durée: {{ song.duree }}</p>
+	<p>genre: {{ song.genre }}</p>
+  </div>
+</div>

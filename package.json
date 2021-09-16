@@ -1,0 +1,23 @@
+{
+  "name": "tp10",
+  "version": "1.0.0",
+  "description": "tp10 NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "nodemon node_modules/mocha/bin/mocha test/**/*.js --reporter spec"
+  },
+  "author": "BRPE",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validation": "^3.0.8",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1"
+  }
+}
